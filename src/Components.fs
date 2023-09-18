@@ -27,6 +27,7 @@ type Components =
     [<ReactComponent>]
     static member FifteenPuzzles() =
         let (gameStarted, setGameStarted) = React.useState(false)
+        let (appState, setAppState) = React.useStateWithUpdater(FifteenPuzzle.InitialState())
         Html.div [
             prop.children [
                 Html.h1 "Fifteen puzzle"
@@ -36,7 +37,34 @@ type Components =
                         prop.onClick (fun _ -> setGameStarted(true))
                     ] else
                         Html.div [
-                            
+                            prop.style [
+                                style.display.grid
+                                style.gridTemplateRows (4, 60, "row")
+                                style.gridTemplateColumns (4, 60, "column")
+                                style.rowGap 1
+                                style.columnGap 1
+                                style.justifyContent.center
+                                style.alignItems.center
+                                style.justifyItems.center
+                                ]
+
+                            prop.children [
+                                for (position, tag) in appState.Slots do
+                                    Html.div [
+                                        prop.style [
+                                            style.width 50
+                                            style.height 50
+                                            style.backgroundColor.lightGreen
+                                            if position = appState.FreePos then style.backgroundColor.lightGray
+                                            style.borderRadius 5
+                                            style.display.flex
+                                            style.justifyContent.center
+                                            style.alignItems.center
+                                            style.cursor.pointer
+                                        ]
+                                        prop.text tag
+                                    ]
+                            ]
                         ]
             ]
         ]
