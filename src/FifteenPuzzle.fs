@@ -18,3 +18,6 @@ let InitialState() : AppState =
     |> fun slots ->
         let pos,_ = Seq.find (fun (p, tag) -> tag = "16") slots
         {Slots = slots; FreePos = pos}
+
+let slotSelected (state: AppState) (selectedPosition: Position) =
+    { state with FreePos = selectedPosition}

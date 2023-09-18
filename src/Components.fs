@@ -62,7 +62,8 @@ type Components =
                                             style.alignItems.center
                                             style.cursor.pointer
                                         ]
-                                        prop.text tag
+                                        prop.text (if position = appState.FreePos then "" else tag)
+                                        prop.onClick (fun _ -> setAppState(fun prevState -> FifteenPuzzle.slotSelected prevState position))
                                     ]
                             ]
                         ]
