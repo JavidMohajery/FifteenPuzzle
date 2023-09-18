@@ -5,4 +5,4 @@ open App
 open Browser.Dom
 
 let root = ReactDOM.createRoot(document.getElementById "feliz-app")
-root.render(Components.FifteenPuzzle())
+root.render(Components.FifteenPuzzles())

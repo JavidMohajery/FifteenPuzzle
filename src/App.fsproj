@@ -5,6 +5,7 @@
     <ItemGroup>
         <None Include="index.html" />
         <Compile Include="Extensions.fs" />
+        <Compile Include="FifteenPuzzle.fs" />
         <Compile Include="Components.fs" />
         <Compile Include="Main.fs" />
     </ItemGroup>

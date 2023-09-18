@@ -25,7 +25,7 @@ type Components =
             ]
         ]
     [<ReactComponent>]
-    static member FifteenPuzzle() =
+    static member FifteenPuzzles() =
         let (gameStarted, setGameStarted) = React.useState(false)
         Html.div [
             prop.children [
@@ -35,7 +35,9 @@ type Components =
                         prop.text "Start the game"
                         prop.onClick (fun _ -> setGameStarted(true))
                     ] else
-                        Html.h3 "<Game here>"
+                        Html.div [
+                            
+                        ]
             ]
         ]
 
