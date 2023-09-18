@@ -35,7 +35,8 @@ type Components =
                     Html.button [
                         prop.text "Start the game"
                         prop.onClick (fun _ -> setGameStarted(true))
-                    ] else
+                    ]
+                    else
                         Html.div [
                             prop.style [
                                 style.display.grid
@@ -63,7 +64,7 @@ type Components =
                                             style.cursor.pointer
                                         ]
                                         prop.text (if position = appState.FreePos then "" else tag)
-                                        prop.onClick (fun _ -> setAppState(fun prevState -> FifteenPuzzle.slotSelected prevState position))
+                                        prop.onClick (fun _ -> setAppState(fun prevState -> FifteenPuzzle.slotSelected prevState position tag))
                                     ]
                             ]
                         ]
