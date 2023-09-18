@@ -24,6 +24,20 @@ type Components =
                 prop.text "Increment"
             ]
         ]
+    [<ReactComponent>]
+    static member FifteenPuzzle() =
+        let (gameStarted, setGameStarted) = React.useState(false)
+        Html.div [
+            prop.children [
+                Html.h1 "Fifteen puzzle"
+                if not gameStarted then
+                    Html.button [
+                        prop.text "Start the game"
+                        prop.onClick (fun _ -> setGameStarted(true))
+                    ] else
+                        Html.h3 "<Game here>"
+            ]
+        ]
 
     /// <summary>
     /// A React component that uses Feliz.Router
