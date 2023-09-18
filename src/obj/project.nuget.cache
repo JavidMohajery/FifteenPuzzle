@@ -1,0 +1,23 @@
+{
+  "version": 2,
+  "dgSpecHash": "05OklDH5SyWP/R5lALt455AjPh8yL/rd80cCrRRWSl3w0yNX19rAKA28WmGNocyaGJdnVidvYBC58RviDo7ubg==",
+  "success": true,
+  "projectFilePath": "/Users/javidmohajeryjolandan/Projects/FifteenPuzzleWithFeliz/src/App.fsproj",
+  "expectedPackageFiles": [
+    "/Users/javidmohajeryjolandan/.nuget/packages/fable.ast/4.2.1/fable.ast.4.2.1.nupkg.sha512",
+    "/Users/javidmohajeryjolandan/.nuget/packages/fable.browser.blob/1.1.4/fable.browser.blob.1.1.4.nupkg.sha512",
+    "/Users/javidmohajeryjolandan/.nuget/packages/fable.browser.dom/2.4.4/fable.browser.dom.2.4.4.nupkg.sha512",
+    "/Users/javidmohajeryjolandan/.nuget/packages/fable.browser.event/1.4.4/fable.browser.event.1.4.4.nupkg.sha512",
+    "/Users/javidmohajeryjolandan/.nuget/packages/fable.browser.gamepad/1.0.3/fable.browser.gamepad.1.0.3.nupkg.sha512",
+    "/Users/javidmohajeryjolandan/.nuget/packages/fable.browser.webstorage/1.0.4/fable.browser.webstorage.1.0.4.nupkg.sha512",
+    "/Users/javidmohajeryjolandan/.nuget/packages/fable.core/3.7.1/fable.core.3.7.1.nupkg.sha512",
+    "/Users/javidmohajeryjolandan/.nuget/packages/fable.elmish/4.0.0/fable.elmish.4.0.0.nupkg.sha512",
+    "/Users/javidmohajeryjolandan/.nuget/packages/fable.react.types/18.3.0/fable.react.types.18.3.0.nupkg.sha512",
+    "/Users/javidmohajeryjolandan/.nuget/packages/fable.reactdom.types/18.2.0/fable.reactdom.types.18.2.0.nupkg.sha512",
+    "/Users/javidmohajeryjolandan/.nuget/packages/feliz/2.6.0/feliz.2.6.0.nupkg.sha512",
+    "/Users/javidmohajeryjolandan/.nuget/packages/feliz.compilerplugins/2.2.0/feliz.compilerplugins.2.2.0.nupkg.sha512",
+    "/Users/javidmohajeryjolandan/.nuget/packages/feliz.router/4.0.0/feliz.router.4.0.0.nupkg.sha512",
+    "/Users/javidmohajeryjolandan/.nuget/packages/fsharp.core/7.0.300/fsharp.core.7.0.300.nupkg.sha512"
+  ],
+  "logs": []
+}
