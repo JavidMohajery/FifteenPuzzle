@@ -1,2 +1,0 @@
-/Users/javidmohajeryjolandan/Projects/FifteenPuzzleWithFeliz/src/obj/Debug/net7.0/App.AssemblyInfoInputs.cache
-/Users/javidmohajeryjolandan/Projects/FifteenPuzzleWithFeliz/src/obj/Debug/net7.0/App.AssemblyInfo.fs

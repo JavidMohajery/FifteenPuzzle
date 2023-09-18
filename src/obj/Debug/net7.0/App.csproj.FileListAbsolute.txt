@@ -1,4 +1,0 @@
-/Users/javidmohajeryjolandan/Projects/FifteenPuzzleWithFeliz/src/bin/Debug/net7.0/App.deps.json
-/Users/javidmohajeryjolandan/Projects/FifteenPuzzleWithFeliz/src/obj/Debug/net7.0/App.GeneratedMSBuildEditorConfig.editorconfig
-/Users/javidmohajeryjolandan/Projects/FifteenPuzzleWithFeliz/src/obj/Debug/net7.0/App.AssemblyInfoInputs.cache
-/Users/javidmohajeryjolandan/Projects/FifteenPuzzleWithFeliz/src/obj/Debug/net7.0/App.AssemblyInfo.cs
