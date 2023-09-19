@@ -19,19 +19,17 @@ let InitialState() : AppState =
         let pos,_ = Seq.find (fun (p, tag) -> tag = "16") slots
         {Slots = slots; FreePos = pos}
 
-let slotSelected (state: AppState) (selectedPosition: Position) (selectedTag: string) =
-    if (state.FreePos.X - selectedPosition.X |> Math.Abs) > 1 ||
-        (state.FreePos.Y - selectedPosition.Y |> Math.Abs) > 1 
-        then
-            state 
-        else
-            let newSlots =
-                state.Slots
-                |> List.map (fun (pos, tag) -> 
-                    if pos = selectedPosition then (pos, "16") else (pos, tag))
-                |> List.map (fun (pos, tag) -> 
-                    if tag = "16" && pos <> selectedPosition then (pos, selectedTag) else (pos, tag))
-
-            { state with Slots = newSlots; FreePos = selectedPosition}
+let slotSelected (state: AppState) (position: Position) (tag: string) =
+    { state with 
+        FreePos = position
+        Slots = if position = state.FreePos 
+                then state.Slots
+                else 
+                    state.Slots
+                    |> List.map (fun (slotPosition, slotTag) -> 
+                            if slotPosition = state.FreePos 
+                            then slotPosition, tag
+                            else slotPosition, slotTag)
+            }
 
 let styleSheet = Stylesheet.load "./fifteen-puzzle.module.css"
