@@ -57,7 +57,11 @@ type Components =
                                         prop.style [
                                         ]
                                         prop.text (if position = appState.FreePos then "" else tag)
-                                        prop.onClick (fun _ -> setAppState(fun prevState -> FifteenPuzzle.slotSelected prevState position tag))
+                                        prop.onClick (fun _ -> 
+                                        setAppState(fun prevState -> 
+                                            if FifteenPuzzle.canMove prevState position
+                                            then  FifteenPuzzle.slotSelected prevState position tag 
+                                            else prevState))
                                     ]
                             ]
                         ]

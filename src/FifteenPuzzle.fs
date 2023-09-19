@@ -33,3 +33,9 @@ let slotSelected (state: AppState) (position: Position) (tag: string) =
             }
 
 let styleSheet = Stylesheet.load "./fifteen-puzzle.module.css"
+
+let canMove (state:AppState)(position:Position) =
+    let diffX = abs (state.FreePos.X - position.X)
+    let diffY = abs (state.FreePos.Y - position.Y)
+    
+    diffX + diffY <= 1
