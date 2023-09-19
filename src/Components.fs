@@ -28,6 +28,7 @@ type Components =
     static member FifteenPuzzles() =
         let (gameStarted, setGameStarted) = React.useState(false)
         let (appState, setAppState) = React.useStateWithUpdater(FifteenPuzzle.InitialState())
+        let styleSheet = FifteenPuzzle.styleSheet
         Html.div [
             prop.children [
                 Html.h1 "Fifteen puzzle"
@@ -39,22 +40,18 @@ type Components =
                     else
                         Html.div [
                             prop.className[
-                                FifteenPuzzle.styleSheet["slots-container"]
+                                styleSheet["slots-container"]
                             ]
 
                             prop.children [
                                 for (position, tag) in appState.Slots do
                                     Html.div [
+                                        prop.className [
+                                            if position = appState.FreePos then 
+                                                styleSheet["slot-free"] else 
+                                                styleSheet["slot"]
+                                            ]
                                         prop.style [
-                                            style.width 50
-                                            style.height 50
-                                            style.backgroundColor.lightGreen
-                                            if position = appState.FreePos then style.backgroundColor.lightGray
-                                            style.borderRadius 5
-                                            style.display.flex
-                                            style.justifyContent.center
-                                            style.alignItems.center
-                                            style.cursor.pointer
                                         ]
                                         prop.text (if position = appState.FreePos then "" else tag)
                                         prop.onClick (fun _ -> setAppState(fun prevState -> FifteenPuzzle.slotSelected prevState position tag))
