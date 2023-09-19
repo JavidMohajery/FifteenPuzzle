@@ -50,9 +50,12 @@ type Components =
                                 for (position, tag) in appState.Slots do
                                     Html.div [
                                         prop.className [
-                                            if position = appState.FreePos then 
-                                                styleSheet["slot-free"] else 
-                                                styleSheet["slot"]
+                                            if position = appState.FreePos 
+                                            then styleSheet["slot-free"] 
+                                            else styleSheet["slot"] 
+                                            
+                                            if FifteenPuzzle.inRightPosition appState position tag
+                                            then styleSheet["correct-position-slot"]
                                             ]
                                         prop.style [
                                         ]

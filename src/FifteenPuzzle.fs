@@ -39,3 +39,7 @@ let canMove (state:AppState)(position:Position) =
     let diffY = abs (state.FreePos.Y - position.Y)
     
     diffX + diffY <= 1
+
+let inRightPosition (state: AppState) (position: Position)(tag: string) =
+    position <> state.FreePos &&
+    position.X * 4 + position.Y + 1 = int tag
