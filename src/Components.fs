@@ -30,6 +30,9 @@ type Components =
         let (appState, setAppState) = React.useStateWithUpdater(FifteenPuzzle.InitialState())
         let styleSheet = FifteenPuzzle.styleSheet
         Html.div [
+            prop.style [
+                style.textAlign.center
+            ]
             prop.children [
                 Html.h1 "Fifteen puzzle"
                 if not gameStarted then
