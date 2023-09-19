@@ -38,16 +38,9 @@ type Components =
                     ]
                     else
                         Html.div [
-                            prop.style [
-                                style.display.grid
-                                style.gridTemplateRows (4, 60, "row")
-                                style.gridTemplateColumns (4, 60, "column")
-                                style.rowGap 1
-                                style.columnGap 1
-                                style.justifyContent.center
-                                style.alignItems.center
-                                style.justifyItems.center
-                                ]
+                            prop.className[
+                                FifteenPuzzle.styleSheet["slots-container"]
+                            ]
 
                             prop.children [
                                 for (position, tag) in appState.Slots do

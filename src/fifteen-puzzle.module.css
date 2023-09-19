@@ -1,0 +1,10 @@
+.slots-container{
+    display: grid;
+    grid-template-rows: repeat(4, 60px);
+    grid-template-columns: repeat(4, 60px);
+    row-gap: 1;
+    column-gap: 1;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+}

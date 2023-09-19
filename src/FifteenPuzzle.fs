@@ -33,3 +33,5 @@ let slotSelected (state: AppState) (selectedPosition: Position) (selectedTag: st
                     if tag = "16" && pos <> selectedPosition then (pos, selectedTag) else (pos, tag))
 
             { state with Slots = newSlots; FreePos = selectedPosition}
+
+let styleSheet = Stylesheet.load "./fifteen-puzzle.module.css"
