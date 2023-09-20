@@ -29,6 +29,8 @@ let slotSelected (state: AppState) (position: Position) (tag: string) =
                     |> List.map (fun (slotPosition, slotTag) -> 
                             if slotPosition = state.FreePos 
                             then slotPosition, tag
+                            elif slotPosition = position 
+                            then slotPosition, ""
                             else slotPosition, slotTag)
             }
 
