@@ -52,10 +52,9 @@ type Components =
                                         prop.className [
                                             if position = appState.FreePos 
                                             then styleSheet["slot-free"] 
-                                            else styleSheet["slot"] 
-                                            
-                                            if FifteenPuzzle.inRightPosition appState position tag
+                                            else if FifteenPuzzle.inRightPosition appState position tag
                                             then styleSheet["correct-position-slot"]
+                                            else styleSheet["slot"] 
                                             ]
                                         prop.style [
                                         ]
@@ -68,6 +67,8 @@ type Components =
                                     ]
                             ]
                         ]
+                if FifteenPuzzle.gameCompleted appState
+                then Html.p "You won!"
             ]
         ]
 

@@ -8,7 +8,7 @@ type AppState  = {Slots: Slot list; FreePos: Position}
 
 let random = Random()
 let InitialState() : AppState =
-    let randomTags =   List.sortBy(fun _ -> random.Next()) [1..16]
+    let randomTags =   List.sortBy (fun _ -> random.Next()) [1..16]
     [
         for x in 0..3 do
         for y in 0..3 do
@@ -43,5 +43,8 @@ let canMove (state:AppState)(position:Position) =
     diffX + diffY <= 1
 
 let inRightPosition (state: AppState) (position: Position)(tag: string) =
-    position <> state.FreePos &&
+    position = state.FreePos ||
     position.X * 4 + position.Y + 1 = int tag
+
+let gameCompleted (state: AppState) =
+    List.forall (fun (position, tag) -> inRightPosition state position tag ) state.Slots
